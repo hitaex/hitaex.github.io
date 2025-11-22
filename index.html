@@ -1,410 +1,239 @@
 <!DOCTYPE html>
-
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
-    <title>سدير للحلول التقنية | Sudair Technical Solutions</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-    :root {
-        --off-white: #F8F7F4;
-        --soft-grey: #BFC3C8;
-        --deep-grey: #4A4F54;
-        --accent-orange: #F27A21;
-        --black: #0F0F0F;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سدير للحلول التقنية | Sudair Technical Solutions</title>
 
-    body {
-        font-family: 'Cairo', sans-serif;
-        background-color: var(--off-white);
-        color: var(--black);
-        line-height: 1.6;
-    }
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    header {
-        background-color: var(--black);
-        padding: 1.2rem 5%;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    .header-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+<style>
+:root {
+  --off-white: #F8F7F4;
+  --soft-grey: #BFC3C8;
+  --deep-grey: #4A4F54;
+  --accent-orange: #F27A21;
+  --black: #0F0F0F;
 
-    .logo {
-        font-family: 'Amiri', serif;
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--off-white);
-        letter-spacing: 1px;
-    }
+  --bg-color: var(--off-white);
+  --text-color: var(--black);
+  --header-bg: var(--black);
+  --footer-bg: var(--black);
+}
 
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 2.5rem;
-    }
+[data-theme="dark"] {
+  --bg-color: #0F0F0F;
+  --text-color: #F8F7F4;
+  --header-bg: #1A1A1A;
+  --footer-bg: #1A1A1A;
+}
 
-    nav a {
-        color: var(--off-white);
-        text-decoration: none;
-        font-weight: 400;
-        transition: color 0.3s ease;
-        font-size: 0.95rem;
-    }
+/* GENERAL */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Cairo',sans-serif;background-color:var(--bg-color);color:var(--text-color);line-height:1.6;transition:0.3s;}
+a{text-decoration:none;}
+header{background-color:var(--header-bg);padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
+.logo img{height:50px;max-width:200px;transition:0.3s;}
+.logo img:hover{transform:scale(1.05);}
+nav ul{list-style:none;display:flex;gap:2rem;}
+nav a{color:var(--off-white);transition:0.3s;}
+nav a:hover{color:var(--accent-orange);}
 
-    nav a:hover {
-        color: var(--accent-orange);
-    }
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--deep-grey)0%,var(--black)100%);color:var(--off-white);padding:6rem 5%;text-align:center;}
+.hero h1{font-family:'Amiri',serif;font-size:3rem;margin-bottom:1rem;}
+.hero p{font-size:1.2rem;margin-bottom:2rem;color:var(--soft-grey);}
+.cta-button{background-color:var(--accent-orange);color:var(--off-white);padding:1rem 2.5rem;border:none;border-radius:4px;font-weight:600;transition:0.3s;display:inline-block;}
+.cta-button:hover{background-color:#d96a1a;transform:translateY(-2px);}
 
-    .hero {
-        background: linear-gradient(135deg, var(--deep-grey) 0%, var(--black) 100%);
-        color: var(--off-white);
-        padding: 6rem 5%;
-        text-align: center;
-    }
+/* SERVICES */
+.services{padding:5rem 5%;}
+.section-title{text-align:center;font-size:2.5rem;margin-bottom:3rem;color:var(--text-color);font-family:'Amiri',serif;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;}
+.service-card{background-color:var(--off-white);padding:2rem;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.08);transition:0.3s;}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 6px 20px rgba(242,122,33,0.15);}
+.service-card h3{color:var(--accent-orange);margin-bottom:1rem;font-size:1.5rem;}
+.service-card p{color:var(--deep-grey);line-height:1.8;}
 
-    .hero-content {
-        max-width: 900px;
-        margin: 0 auto;
-    }
+/* ABOUT */
+.about{background-color:var(--deep-grey);color:var(--off-white);padding:5rem 5%;text-align:center;}
+.about h2{font-family:'Amiri',serif;font-size:2.5rem;margin-bottom:2rem;}
+.about p{font-size:1.1rem;line-height:1.9;color:var(--soft-grey);}
 
-    .hero h1 {
-        font-family: 'Amiri', serif;
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        color: var(--off-white);
-    }
+/* TECHNOLOGIES */
+.technologies{padding:5rem 5%;}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:2rem;}
+.tech-item{background-color:var(--off-white);padding:1.5rem;border-radius:6px;text-align:center;border:2px solid transparent;transition:0.3s;cursor:pointer;}
+.tech-item:hover{transform:translateY(-5px);border-color:var(--accent-orange);}
+.tech-item i,.tech-item svg{font-size:40px;margin-bottom:10px;color:var(--accent-orange);transition:0.5s;}
+.tech-item:hover i,.tech-item:hover svg{transform:rotate(15deg) scale(1.2);}
+.tech-item h3{font-size:1.1rem;margin-bottom:5px;}
+.tech-item p{font-size:0.95rem;color:var(--deep-grey);}
 
-    .hero p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-        color: var(--soft-grey);
-    }
+/* FOOTER */
+footer{background-color:var(--footer-bg);color:var(--off-white);padding:3rem 5%;}
+.footer-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;max-width:1400px;margin:0 auto;}
+.footer-section h3{font-family:'Amiri',serif;color:var(--accent-orange);margin-bottom:1rem;}
+.footer-section p,.footer-section a{color:var(--soft-grey);margin-bottom:0.5rem;display:block;}
+.footer-section a:hover{color:var(--accent-orange);}
+.footer-bottom{text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--deep-grey);}
 
-    .cta-button {
-        background-color: var(--accent-orange);
-        color: var(--off-white);
-        padding: 1rem 2.5rem;
-        border: none;
-        border-radius: 4px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-        text-decoration: none;
-        display: inline-block;
-        font-weight: 600;
-    }
+/* LIGHT/DARK MODE BUTTON */
+#theme-toggle{position:fixed;bottom:30px;left:30px;background-color:var(--accent-orange);color:var(--off-white);border:none;border-radius:50%;width:50px;height:50px;font-size:1.2rem;cursor:pointer;z-index:2000;box-shadow:0 4px 10px rgba(0,0,0,0.2);transition:0.3s;}
+#theme-toggle:hover{transform:scale(1.1);}
 
-    .cta-button:hover {
-        background-color: #d96a1a;
-        transform: translateY(-2px);
-    }
+/* CONTACT POPUP BUTTON */
+#contact-circle{position:fixed;bottom:100px;right:30px;width:60px;height:60px;border-radius:50%;background-color:var(--accent-orange);color:white;font-size:1.5rem;display:flex;justify-content:center;align-items:center;cursor:pointer;z-index:2000;box-shadow:0 4px 10px rgba(0,0,0,0.2);transition:0.3s;}
+#contact-circle:hover{transform:scale(1.1);}
+#contact-popup{position:fixed;bottom:180px;right:30px;width:300px;background-color:var(--off-white);color:var(--text-color);border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.2);padding:1.5rem;display:none;z-index:2000;}
+#contact-popup input, #contact-popup textarea{width:100%;margin-bottom:10px;padding:8px;border-radius:4px;border:1px solid #ccc;}
+#contact-popup button{background-color:var(--accent-orange);color:white;padding:10px 15px;border:none;border-radius:4px;cursor:pointer;}
+#contact-popup button:hover{background-color:#d96a1a;}
 
-    .services {
-        padding: 5rem 5%;
-        background-color: var(--off-white);
-    }
-
-    .services-container {
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    .section-title {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 3rem;
-        color: var(--black);
-        font-family: 'Amiri', serif;
-    }
-
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-    }
-
-    .service-card {
-        background-color: white;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(242, 122, 33, 0.15);
-    }
-
-    .service-card h3 {
-        color: var(--accent-orange);
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
-    }
-
-    .service-card p {
-
-color: var(--deep-grey);
-        line-height: 1.8;
-    }
-
-    .about {
-        background-color: var(--deep-grey);
-        color: var(--off-white);
-        padding: 5rem 5%;
-    }
-
-    .about-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .about h2 {
-        font-family: 'Amiri', serif;
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .about p {
-        font-size: 1.1rem;
-        line-height: 1.9;
-        color: var(--soft-grey);
-    }
-
-    .technologies {
-        padding: 5rem 5%;
-        background-color: white;
-    }
-
-    .tech-container {
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    .tech-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
-        margin-top: 2rem;
-    }
-
-    .tech-item {
-        background-color: var(--off-white);
-        padding: 1.5rem;
-        border-radius: 6px;
-        text-align: center;
-        border: 2px solid transparent;
-        transition: border-color 0.3s ease;
-    }
-
-    .tech-item:hover {
-        border-color: var(--accent-orange);
-    }
-
-    .tech-item h4 {
-        color: var(--black);
-        font-size: 1.1rem;
-    }
-
-    footer {
-        background-color: var(--black);
-        color: var(--off-white);
-        padding: 3rem 5%;
-    }
-
-    .footer-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 3rem;
-    }
-
-    .footer-section h3 {
-        font-family: 'Amiri', serif;
-        color: var(--accent-orange);
-        margin-bottom: 1rem;
-        font-size: 1.4rem;
-    }
-
-    .footer-section p, .footer-section a {
-        color: var(--soft-grey);
-        text-decoration: none;
-        display: block;
-        margin-bottom: 0.5rem;
-        transition: color 0.3s ease;
-    }
-
-    .footer-section a:hover {
-        color: var(--accent-orange);
-    }
-
-    .footer-bottom {
-        text-align: center;
-        margin-top: 3rem;
-        padding-top: 2rem;
-        border-top: 1px solid var(--deep-grey);
-        color: var(--soft-grey);
-    }
-
-    @media (max-width: 768px) {
-        nav ul {
-            gap: 1.5rem;
-        }
-
-        .hero h1 {
-            font-size: 2rem;
-        }
-
-        .hero p {
-            font-size: 1rem;
-        }
-
-        .section-title {
-            font-size: 2rem;
-        }
-    }
+/* RESPONSIVE */
+@media (max-width:768px){nav ul{gap:1rem;}.hero h1{font-size:2rem;}.hero p{font-size:1rem;}.section-title{font-size:2rem;}}
 </style>
-
 </head>
-<body>
-    <header>
-        <div class="header-container">
-            <nav>
-                <ul>
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#services">خدماتنا</a></li>
-                    <li><a href="#about">من نحن</a></li>
-                    <li><a href="#contact">اتصل بنا</a></li>
-                </ul>
-            </nav>
-            <div class="logo">سدير للحلول التقنية</div>
-        </div>
-    </header>
+
+<body data-theme="light">
+
+<header>
+  <div class="logo">
+    <img src="logo.svg" alt="سدير للحلول التقنية" width="150" height="150">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#services">خدماتنا</a></li>
+      <li><a href="#about">من نحن</a></li>
+      <li><a href="#technologies">التقنيات</a></li>
+      <li><a href="#contact">اتصل بنا</a></li>
+    </ul>
+  </nav>
+</header>
+
 <section class="hero" id="home">
-    <div class="hero-content">
-        <h1>حلول هندسية متكاملة لمشاريعك التقنية</h1>
-        <p>نقدم خدمات احترافية في الهندسة الكهربائية والبرمجية وأنظمة التحكم والتصميم الميكانيكي للمشاريع الخاصة والعقود الجماعية</p>
-        <a href="#contact" class="cta-button">تواصل معنا</a>
-    </div>
+  <h1>حلول هندسية متكاملة لمشاريعك التقنية</h1>
+  <p>نقدم خدمات احترافية في الهندسة الكهربائية والبرمجية وأنظمة التحكم والتصميم الميكانيكي للمشاريع الخاصة والعقود الجماعية</p>
+  <a href="#contact" class="cta-button">تواصل معنا</a>
 </section>
 
 <section class="services" id="services">
-    <div class="services-container">
-        <h2 class="section-title">خدماتنا المتخصصة</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>الهندسة الكهربائية والإلكترونية</h3>
-                <p>تصميم وتنفيذ الأنظمة الكهربائية والإلكترونية للمشاريع الصناعية والتجارية مع الالتزام بأعلى معايير الجودة والسلامة.</p>
-            </div>
-            <div class="service-card">
-                <h3>الهندسة البرمجية والتطبيقات</h3>
-                <p>تطوير حلول برمجية مخصصة باستخدام لغة C وأحدث التقنيات لتلبية احتياجات عملك بكفاءة واحترافية عالية.</p>
-            </div>
-            <div class="service-card">
-                <h3>أنظمة التحكم الآلي (PLCs)</h3>
-
-<p>برمجة وتشغيل أنظمة المتحكمات المنطقية القابلة للبرمجة لأتمتة العمليات الصناعية وتحسين الإنتاجية.</p>
-            </div>
-            <div class="service-card">
-                <h3>حلول Arduino والأنظمة المدمجة</h3>
-                <p>تصميم وتطوير مشاريع Arduino والأنظمة المدمجة للتطبيقات الصناعية والتعليمية بحلول مبتكرة وفعالة.</p>
-            </div>
-            <div class="service-card">
-                <h3>التصميم الميكانيكي الهندسي</h3>
-                <p>خدمات تصميم ميكانيكي شاملة تشمل النمذجة ثلاثية الأبعاد والرسومات الهندسية لمختلف التطبيقات الصناعية.</p>
-            </div>
-            <div class="service-card">
-                <h3>الاستشارات الهندسية</h3>
-                <p>تقديم استشارات هندسية متخصصة للمشاريع الكبرى والعقود الخاصة لضمان نجاح مشروعك من البداية للنهاية.</p>
-            </div>
-        </div>
+  <h2 class="section-title">خدماتنا المتخصصة</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>الهندسة الكهربائية والإلكترونية</h3>
+      <p>تصميم وتنفيذ الأنظمة الكهربائية والإلكترونية للمشاريع الصناعية والتجارية مع الالتزام بأعلى معايير الجودة والسلامة.</p>
     </div>
+    <div class="service-card">
+      <h3>الهندسة البرمجية والتطبيقات</h3>
+      <p>تلبية جميع احتياجاتك البرمجية من قبل فريق متخصص بتصميم التطبيقات والمواقع والحلول البرمجية كافة.</p>
+    </div>
+    <div class="service-card">
+      <h3>أنظمة التحكم الآلي (PLCs)</h3>
+      <p>برمجة وتشغيل أنظمة المتحكمات المنطقية القابلة للبرمجة لأتمتة العمليات الصناعية وتحسين الإنتاجية.</p>
+    </div>
+    <div class="service-card">
+      <h3>التصميم الميكانيكي الهندسي</h3>
+      <p>خدمات تصميم ميكانيكي شاملة تشمل النمذجة ثلاثية الأبعاد والرسومات الهندسية لمختلف التطبيقات الصناعية.</p>
+    </div>
+    <div class="service-card">
+      <h3>الاستشارات الهندسية</h3>
+      <p>تقديم استشارات هندسية متخصصة للمشاريع الكبرى والعقود الخاصة لضمان نجاح مشروعك من البداية للنهاية.</p>
+    </div>
+  </div>
 </section>
 
 <section class="about" id="about">
-    <div class="about-container">
-        <h2>من نحن</h2>
-        <p>سدير للحلول التقنية هي شركة رائدة في تقديم الحلول الهندسية المتكاملة. نتخصص في خدمة المشاريع الخاصة والعقود الجماعية بخبرة واسعة في مجالات الهندسة الكهربائية والبرمجية وأنظمة التحكم والتصميم الميكانيكي. نلتزم بتقديم حلول مبتكرة وموثوقة تلبي أعلى معايير الجودة والاحترافية.</p>
-    </div>
+  <h2>من نحن</h2>
+  <p>سدير للحلول التقنية هي شركة رائدة في تقديم الحلول الهندسية المتكاملة. نتخصص في خدمة المشاريع الخاصة والعقود الجماعية بخبرة واسعة في مجالات الهندسة الكهربائية والبرمجية وأنظمة التحكم والتصميم الميكانيكي. نلتزم بتقديم حلول مبتكرة وموثوقة تلبي أعلى معايير الجودة والاحترافية.</p>
 </section>
 
-<section class="technologies">
-    <div class="tech-container">
-        <h2 class="section-title">التقنيات التي نستخدمها</h2>
-        <div class="tech-grid">
-            <div class="tech-item">
-                <h4>لغة البرمجة C</h4>
-            </div>
-            <div class="tech-item">
-                <h4>Arduino</h4>
-            </div>
-            <div class="tech-item">
-                <h4>PLCs</h4>
-            </div>
-            <div class="tech-item">
-                <h4>أنظمة التحكم</h4>
-            </div>
-            <div class="tech-item">
-                <h4>الدوائر الإلكترونية</h4>
-            </div>
-            <div class="tech-item">
-                <h4>CAD Design</h4>
-            </div>
-        </div>
-    </div>
+<section class="technologies" id="technologies">
+  <h2 class="section-title">التقنيات التي نستخدمها</h2>
+  <div class="tech-grid">
+    <div class="tech-item"><i class="fab fa-js"></i><h3>JavaScript</h3><p>✔ Node.js, React, Angular, Vue</p></div>
+    <div class="tech-item"><i class="fab fa-react"></i><h3>React Native</h3><p>✔ تطوير تطبيقات الهواتف الذكية</p></div>
+    <div class="tech-item"><i class="fas fa-microchip"></i><h3>Embedded Systems</h3><p>✔ Arduino, STM32, ESP32, Raspberry Pi</p></div>
+    <div class="tech-item"><i class="fas fa-server"></i><h3>Cloud</h3><p>✔ AWS, Azure, Google Cloud</p></div>
+    <div class="tech-item"><i class="fas fa-cogs"></i><h3>PLCs</h3><p>✔ Siemens, Allen-Bradley, Schneider</p></div>
+    <div class="tech-item"><i class="fas fa-microchip"></i><h3>PCB Design</h3><p>✔ KiCAD, Eagle, Altium</p></div>
+  </div>
 </section>
 
 <footer id="contact">
-    <div class="footer-container">
-        <div class="footer-section">
-            <h3>سدير للحلول التقنية</h3>
-            <p>شريكك الموثوق في الحلول الهندسية المتكاملة للمشاريع الخاصة والعقود الجماعية</p>
-        </div>
-        <div class="footer-section">
-            <h3>معلومات التواصل</h3>
-            <p>البريد الإلكتروني: info@sadeertech.com</p>
-            <p>الهاتف: +966 XX XXX XXXX</p>
-            <p>الجوال: +966 5X XXX XXXX</p>
-        </div>
-        <div class="footer-section">
-            <h3>خدماتنا</h3>
-            <a href="#services">الهندسة الكهربائية</a>
-            <a href="#services">الهندسة البرمجية</a>
-            <a href="#services">أنظمة التحكم</a>
-            <a href="#services">التصميم الميكانيكي</a>
-        </div>
-        <div class="footer-section">
-            <h3>روابط سريعة</h3>
-            <a href="#home">الرئيسية</a>
-            <a href="#services">خدماتنا</a>
-            <a href="#about">من نحن</a>
-            <a href="#contact">اتصل بنا</a>
-        </div>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>سدير للحلول التقنية</h3>
+      <p>شريكك الموثوق في الحلول الهندسية المتكاملة للمشاريع الخاصة والعقود الجماعية</p>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 سدير للحلول التقنية. جميع الحقوق محفوظة.</p>
+    <div class="footer-section">
+      <h3>معلومات التواصل</h3>
+      <p>البريد الإلكتروني: <a href="mailto:taemabalhail@gmail.com">taemabalhail@gmail.com</a></p>
+      <p>الهاتف: 009647871982785</p>
+      
     </div>
+    <div class="footer-section">
+      <h3>خدماتنا</h3>
+      <a href="#services">الهندسة الكهربائية</a>
+      <a href="#services">الهندسة البرمجية</a>
+      <a href="#services">أنظمة التحكم</a>
+      <a href="#services">التصميم الميكانيكي</a>
+    </div>
+    <div class="footer-section">
+      <h3>روابط سريعة</h3>
+      <a href="#home">الرئيسية</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#about">من نحن</a>
+      <a href="#technologies">التقنيات</a>
+      <a href="#contact">اتصل بنا</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 سدير للحلول التقنية. جميع الحقوق محفوظة.
+  </div>
 </footer>
+
+<!-- Light/Dark Mode Button -->
+<button id="theme-toggle"><i class="fas fa-adjust"></i></button>
+
+<!-- Contact Circle Button -->
+
+<!-- Contact Popup -->
+
+<script>
+// LIGHT/DARK MODE
+const toggleBtn = document.getElementById('theme-toggle');
+const body = document.body;
+toggleBtn.addEventListener('click', () => {
+  const theme = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  body.setAttribute('data-theme', theme);
+});
+
+// CONTACT POPUP
+const contactCircle = document.getElementById('contact-circle');
+const contactPopup = document.getElementById('contact-popup');
+contactCircle.addEventListener('click', () => {
+  contactPopup.style.display = contactPopup.style.display === 'block' ? 'none' : 'block';
+});
+
+// SIMPLE ALERT FOR SEND
+document.getElementById('send-contact').addEventListener('click', () => {
+  const name = document.getElementById('contact-name').value;
+  const email = document.getElementById('contact-email').value;
+  const message = document.getElementById('contact-message').value;
+  if(name && email && message){
+    alert('تم إرسال رسالتك بنجاح!');
+    contactPopup.style.display = 'none';
+  }else{
+    alert('يرجى ملء جميع الحقول.');
+  }
+});
+</script>
 
 </body>
 </html>
