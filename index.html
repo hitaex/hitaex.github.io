@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+    <title>سدير للحلول التقنية | Sudair Technical Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    :root {
+        --off-white: #F8F7F4;
+        --soft-grey: #BFC3C8;
+        --deep-grey: #4A4F54;
+        --accent-orange: #F27A21;
+        --black: #0F0F0F;
+    }
+
+    body {
+        font-family: 'Cairo', sans-serif;
+        background-color: var(--off-white);
+        color: var(--black);
+        line-height: 1.6;
+    }
+
+    header {
+        background-color: var(--black);
+        padding: 1.2rem 5%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-family: 'Amiri', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--off-white);
+        letter-spacing: 1px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    nav a {
+        color: var(--off-white);
+        text-decoration: none;
+        font-weight: 400;
+        transition: color 0.3s ease;
+        font-size: 0.95rem;
+    }
+
+    nav a:hover {
+        color: var(--accent-orange);
+    }
+
+    .hero {
+        background: linear-gradient(135deg, var(--deep-grey) 0%, var(--black) 100%);
+        color: var(--off-white);
+        padding: 6rem 5%;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-family: 'Amiri', serif;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: var(--off-white);
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: var(--soft-grey);
+    }
+
+    .cta-button {
+        background-color: var(--accent-orange);
+        color: var(--off-white);
+        padding: 1rem 2.5rem;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 600;
+    }
+
+    .cta-button:hover {
+        background-color: #d96a1a;
+        transform: translateY(-2px);
+    }
+
+    .services {
+        padding: 5rem 5%;
+        background-color: var(--off-white);
+    }
+
+    .services-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: var(--black);
+        font-family: 'Amiri', serif;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .service-card {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(242, 122, 33, 0.15);
+    }
+
+    .service-card h3 {
+        color: var(--accent-orange);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .service-card p {
+
+color: var(--deep-grey);
+        line-height: 1.8;
+    }
+
+    .about {
+        background-color: var(--deep-grey);
+        color: var(--off-white);
+        padding: 5rem 5%;
+    }
+
+    .about-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .about h2 {
+        font-family: 'Amiri', serif;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .about p {
+        font-size: 1.1rem;
+        line-height: 1.9;
+        color: var(--soft-grey);
+    }
+
+    .technologies {
+        padding: 5rem 5%;
+        background-color: white;
+    }
+
+    .tech-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .tech-item {
+        background-color: var(--off-white);
+        padding: 1.5rem;
+        border-radius: 6px;
+        text-align: center;
+        border: 2px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+
+    .tech-item:hover {
+        border-color: var(--accent-orange);
+    }
+
+    .tech-item h4 {
+        color: var(--black);
+        font-size: 1.1rem;
+    }
+
+    footer {
+        background-color: var(--black);
+        color: var(--off-white);
+        padding: 3rem 5%;
+    }
+
+    .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+    }
+
+    .footer-section h3 {
+        font-family: 'Amiri', serif;
+        color: var(--accent-orange);
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+    }
+
+    .footer-section p, .footer-section a {
+        color: var(--soft-grey);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 0.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+        color: var(--accent-orange);
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--deep-grey);
+        color: var(--soft-grey);
+    }
+
+    @media (max-width: 768px) {
+        nav ul {
+            gap: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <nav>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="logo">سدير للحلول التقنية</div>
+        </div>
+    </header>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>حلول هندسية متكاملة لمشاريعك التقنية</h1>
+        <p>نقدم خدمات احترافية في الهندسة الكهربائية والبرمجية وأنظمة التحكم والتصميم الميكانيكي للمشاريع الخاصة والعقود الجماعية</p>
+        <a href="#contact" class="cta-button">تواصل معنا</a>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <div class="services-container">
+        <h2 class="section-title">خدماتنا المتخصصة</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>الهندسة الكهربائية والإلكترونية</h3>
+                <p>تصميم وتنفيذ الأنظمة الكهربائية والإلكترونية للمشاريع الصناعية والتجارية مع الالتزام بأعلى معايير الجودة والسلامة.</p>
+            </div>
+            <div class="service-card">
+                <h3>الهندسة البرمجية والتطبيقات</h3>
+                <p>تطوير حلول برمجية مخصصة باستخدام لغة C وأحدث التقنيات لتلبية احتياجات عملك بكفاءة واحترافية عالية.</p>
+            </div>
+            <div class="service-card">
+                <h3>أنظمة التحكم الآلي (PLCs)</h3>
+
+<p>برمجة وتشغيل أنظمة المتحكمات المنطقية القابلة للبرمجة لأتمتة العمليات الصناعية وتحسين الإنتاجية.</p>
+            </div>
+            <div class="service-card">
+                <h3>حلول Arduino والأنظمة المدمجة</h3>
+                <p>تصميم وتطوير مشاريع Arduino والأنظمة المدمجة للتطبيقات الصناعية والتعليمية بحلول مبتكرة وفعالة.</p>
+            </div>
+            <div class="service-card">
+                <h3>التصميم الميكانيكي الهندسي</h3>
+                <p>خدمات تصميم ميكانيكي شاملة تشمل النمذجة ثلاثية الأبعاد والرسومات الهندسية لمختلف التطبيقات الصناعية.</p>
+            </div>
+            <div class="service-card">
+                <h3>الاستشارات الهندسية</h3>
+                <p>تقديم استشارات هندسية متخصصة للمشاريع الكبرى والعقود الخاصة لضمان نجاح مشروعك من البداية للنهاية.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-container">
+        <h2>من نحن</h2>
+        <p>سدير للحلول التقنية هي شركة رائدة في تقديم الحلول الهندسية المتكاملة. نتخصص في خدمة المشاريع الخاصة والعقود الجماعية بخبرة واسعة في مجالات الهندسة الكهربائية والبرمجية وأنظمة التحكم والتصميم الميكانيكي. نلتزم بتقديم حلول مبتكرة وموثوقة تلبي أعلى معايير الجودة والاحترافية.</p>
+    </div>
+</section>
+
+<section class="technologies">
+    <div class="tech-container">
+        <h2 class="section-title">التقنيات التي نستخدمها</h2>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <h4>لغة البرمجة C</h4>
+            </div>
+            <div class="tech-item">
+                <h4>Arduino</h4>
+            </div>
+            <div class="tech-item">
+                <h4>PLCs</h4>
+            </div>
+            <div class="tech-item">
+                <h4>أنظمة التحكم</h4>
+            </div>
+            <div class="tech-item">
+                <h4>الدوائر الإلكترونية</h4>
+            </div>
+            <div class="tech-item">
+                <h4>CAD Design</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>سدير للحلول التقنية</h3>
+            <p>شريكك الموثوق في الحلول الهندسية المتكاملة للمشاريع الخاصة والعقود الجماعية</p>
+        </div>
+        <div class="footer-section">
+            <h3>معلومات التواصل</h3>
+            <p>البريد الإلكتروني: info@sadeertech.com</p>
+            <p>الهاتف: +966 XX XXX XXXX</p>
+            <p>الجوال: +966 5X XXX XXXX</p>
+        </div>
+        <div class="footer-section">
+            <h3>خدماتنا</h3>
+            <a href="#services">الهندسة الكهربائية</a>
+            <a href="#services">الهندسة البرمجية</a>
+            <a href="#services">أنظمة التحكم</a>
+            <a href="#services">التصميم الميكانيكي</a>
+        </div>
+        <div class="footer-section">
+            <h3>روابط سريعة</h3>
+            <a href="#home">الرئيسية</a>
+            <a href="#services">خدماتنا</a>
+            <a href="#about">من نحن</a>
+            <a href="#contact">اتصل بنا</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 سدير للحلول التقنية. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
+
+</body>
+</html>
