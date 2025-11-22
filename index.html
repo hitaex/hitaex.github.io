@@ -117,8 +117,8 @@ footer{background-color:var(--footer-bg);color:var(--off-white);padding:3rem 5%;
 </header>
 
 <section class="hero" id="home">
-  <h1>حلول هندسية متكاملة لمشاريعك التقنية</h1>
-  <p>نقدم خدمات احترافية في الهندسة الكهربائية والبرمجية وأنظمة التحكم والتصميم الميكانيكي للمشاريع الخاصة والعقود الجماعية</p>
+  <h1>حلول متكاملة لمشاريعك التقنية</h1>
+  <p>نقدم خدمات احترافية في التقنيات الكهربائية والبرمجية وأنظمة التحكم والتصميم الميكانيكي للمشاريع الخاصة والعقود الجماعية</p>
   <a href="#contact" class="cta-button">تواصل معنا</a>
 </section>
 
@@ -126,11 +126,11 @@ footer{background-color:var(--footer-bg);color:var(--off-white);padding:3rem 5%;
   <h2 class="section-title">خدماتنا المتخصصة</h2>
   <div class="services-grid">
     <div class="service-card">
-      <h3>الهندسة الكهربائية والإلكترونية</h3>
+      <h3>التقنيات الكهربائية والإلكترونية</h3>
       <p>تصميم وتنفيذ الأنظمة الكهربائية والإلكترونية للمشاريع الصناعية والتجارية مع الالتزام بأعلى معايير الجودة والسلامة.</p>
     </div>
     <div class="service-card">
-      <h3>الهندسة البرمجية والتطبيقات</h3>
+      <h3>المشاريع البرمجية والتطبيقات</h3>
       <p>تلبية جميع احتياجاتك البرمجية من قبل فريق متخصص بتصميم التطبيقات والمواقع والحلول البرمجية كافة.</p>
     </div>
     <div class="service-card">
@@ -143,14 +143,14 @@ footer{background-color:var(--footer-bg);color:var(--off-white);padding:3rem 5%;
     </div>
     <div class="service-card">
       <h3>الاستشارات الهندسية</h3>
-      <p>تقديم استشارات هندسية متخصصة للمشاريع الكبرى والعقود الخاصة لضمان نجاح مشروعك من البداية للنهاية.</p>
+      <p>تقديم استشارات متخصصة للمشاريع الكبرى والعقود الخاصة لضمان نجاح مشروعك من البداية للنهاية.</p>
     </div>
   </div>
 </section>
 
 <section class="about" id="about">
   <h2>من نحن</h2>
-  <p>سدير للحلول التقنية هي شركة رائدة في تقديم الحلول الهندسية المتكاملة. نتخصص في خدمة المشاريع الخاصة والعقود الجماعية بخبرة واسعة في مجالات الهندسة الكهربائية والبرمجية وأنظمة التحكم والتصميم الميكانيكي. نلتزم بتقديم حلول مبتكرة وموثوقة تلبي أعلى معايير الجودة والاحترافية.</p>
+  <p>سدير للحلول التقنية هي شركة رائدة في تقديم الحلول لمتكاملة. نتخصص في خدمة المشاريع الخاصة والعقود الجماعية بخبرة واسعة في المجالات الكهربائية والبرمجية وأنظمة التحكم والتصميم الميكانيكي. نلتزم بتقديم حلول مبتكرة وموثوقة تلبي أعلى معايير الجودة والاحترافية.</p>
 </section>
 
 <section class="technologies" id="technologies">
@@ -169,7 +169,7 @@ footer{background-color:var(--footer-bg);color:var(--off-white);padding:3rem 5%;
   <div class="footer-container">
     <div class="footer-section">
       <h3>سدير للحلول التقنية</h3>
-      <p>شريكك الموثوق في الحلول الهندسية المتكاملة للمشاريع الخاصة والعقود الجماعية</p>
+      <p>شريكك الموثوق في الحلول المتكاملة للمشاريع الخاصة والعقود الجماعية</p>
     </div>
     <div class="footer-section">
       <h3>معلومات التواصل</h3>
@@ -221,18 +221,7 @@ contactCircle.addEventListener('click', () => {
   contactPopup.style.display = contactPopup.style.display === 'block' ? 'none' : 'block';
 });
 
-// SIMPLE ALERT FOR SEND
-document.getElementById('send-contact').addEventListener('click', () => {
-  const name = document.getElementById('contact-name').value;
-  const email = document.getElementById('contact-email').value;
-  const message = document.getElementById('contact-message').value;
-  if(name && email && message){
-    alert('تم إرسال رسالتك بنجاح!');
-    contactPopup.style.display = 'none';
-  }else{
-    alert('يرجى ملء جميع الحقول.');
-  }
-});
+
 </script>
 
 </body>
